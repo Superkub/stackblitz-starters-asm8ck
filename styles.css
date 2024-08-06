@@ -1,0 +1,85 @@
+/* Generelle stilregler */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #4a90e2;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Transition Example */
+.transition-example .transition-box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 0 auto;
+  transition: background-color 0.5s ease;
+}
+
+.transition-example .transition-box:hover {
+  background-color: blue;
+}
+
+/* Animation Example */
+.animation-example .animation-box {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 0 auto;
+  animation: moveAcross 4s linear infinite;
+}
+
+@keyframes moveAcross {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Combined Transition and Animation Example */
+.combined-example .combined-box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  margin: 0 auto;
+  animation: moveUpAndDown 4s infinite ease-in-out;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.combined-example .combined-box:hover {
+  background-color: purple;
+  transform: scale(1.1);
+}
+
+@keyframes moveUpAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
